@@ -14,9 +14,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: dev
-      url: https:testecidev.com.br
+    #environment:
+    #  name: dev
+    #  url: https:testecidev.com.br
     steps:
       - uses: actions/checkout@v2
       
