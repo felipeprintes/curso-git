@@ -1,4 +1,3 @@
-
 name: main-ci
 
 # Controls when the pipeline actions will run.
@@ -20,7 +19,11 @@ jobs:
       url: https:testecidev.com.br
     steps:
       - uses: actions/checkout@v2
+      
       - name: First Pipeline Task
+        shell: bash
+        env:
+          PIPOCA: ${{ secrets.PIPOCA }}
         run: |
           echo "First Job - Hello World"
           echo "$PIPOCA"
