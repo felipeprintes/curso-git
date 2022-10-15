@@ -21,8 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: First Pipeline Task
-      - env:
-          PIPOCA: ${{ secrets.PIPOCA }}
         run: |
           echo "First Job - Hello World"
           echo "$PIPOCA"
