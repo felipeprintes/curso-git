@@ -5,16 +5,16 @@ name: main-ci
 
 on:
   push:
-    #branchs: [develop-upload-s3-actions-pipeline]
     branchs: [develop]
     pull_request:
       branches:
         - main
 
 jobs:
+  if: ${{ github.ref_name }} == 'develop'
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name }} == 'develop'
+    
     environment:
       name: dev
       url: https:testecidev.com.br
