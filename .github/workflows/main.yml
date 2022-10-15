@@ -26,4 +26,5 @@ jobs:
           PIPOCA: ${{ secrets.PIPOCA }}
         run: |
           echo "First Job - Hello World"
+          echo "$github.ref_name"
           echo "$PIPOCA"
